@@ -9,22 +9,33 @@ class AboutMeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.white,
         body: SafeArea(
-          child: Center(
-            child: Container(
-                color: Colors.white,
-                height: 100.0,
-                width: 100.0,
-                margin: EdgeInsets.all(20.0),
-                padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: Text(
-                  'Hello, Deeksha, how are you doing?',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                )),
-          ),
-        ),
+            child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              color: Colors.red,
+              width: 100.0,
+            ),
+            Container(
+              width: 100.0,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(color: Colors.yellow,width: 100.0, height: 100.0),
+                  Container(color: Colors.green,width: 100.0, height: 100.0),
+                ],
+              ),
+
+            ),
+            Container(
+              color: Colors.blue,
+              width: 100.0,
+            ),
+          ],
+        )),
       ),
     );
   }
