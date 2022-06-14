@@ -8,35 +8,84 @@ class AboutMeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
-            child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              color: Colors.red,
-              width: 100.0,
-            ),
-            Container(
-              width: 100.0,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(color: Colors.yellow,width: 100.0, height: 100.0),
-                  Container(color: Colors.green,width: 100.0, height: 100.0),
-                ],
+        home: Scaffold(
+            backgroundColor: Colors.greenAccent,
+            body: SafeArea(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                        maxRadius: 50.0,
+                        backgroundColor: Colors.white,
+                        backgroundImage: AssetImage('images/kumi.jpeg')),
+                    Text(
+                      'Kumi',
+                      style: TextStyle(
+                        fontFamily: 'Pacifico',
+                        fontWeight: FontWeight.w800,
+                        fontSize: 25.0,
+                      ),
+                    ),
+                    SizedBox(width: 16, height: 16),
+                    Text(
+                      'THE LITTLE FOX',
+                      style: TextStyle(
+                        fontFamily: 'Hind',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                      ),
+                    ),
+                    SizedBox(
+                        width: 150,
+                        height: 16,
+                        child: Divider(
+                          height: 2.0,
+                          color: Colors.black,
+                        )),
+                    SizedBox(width: 12, height: 12),
+                    Card(
+                        elevation: 0,
+                        child: SizedBox(
+                          width: 300,
+                          height: 50,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                Icons.phone,
+                                color: Colors.green,
+                              ),
+                              Text(
+                                '+1 514(895)-5927',
+                                style: TextStyle(fontWeight: FontWeight.w600),
+                              )
+                            ],
+                          ),
+                        )),
+                    SizedBox(width: 16, height: 16),
+                    Card(
+                        elevation: 0,
+                        child: SizedBox(
+                          width: 300,
+                          height: 50,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Icon(
+                                Icons.email,
+                                color: Colors.green,
+                              ),
+                              Text(
+                                'kumi.ku@gmail.com',
+                                style: TextStyle(fontWeight: FontWeight.w600),
+                              )
+                            ],
+                          ),
+                        )),
+                  ],
+                ),
               ),
-
-            ),
-            Container(
-              color: Colors.blue,
-              width: 100.0,
-            ),
-          ],
-        )),
-      ),
-    );
+            )));
   }
 }
