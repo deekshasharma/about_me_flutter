@@ -24,7 +24,7 @@ class AboutMeApp extends StatelessWidget {
                       style: TextStyle(
                         fontFamily: 'Pacifico',
                         fontWeight: FontWeight.w800,
-                        fontSize: 25.0,
+                        fontSize: 35.0,
                       ),
                     ),
                     SizedBox(width: 16, height: 16),
