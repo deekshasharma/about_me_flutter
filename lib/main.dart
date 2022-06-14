@@ -48,39 +48,20 @@ class AboutMeApp extends StatelessWidget {
                         elevation: 0,
                         child: SizedBox(
                           width: 300,
-                          height: 50,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Icon(
-                                Icons.phone,
-                                color: Colors.green,
-                              ),
-                              Text(
-                                '+1 514(895)-5927',
-                                style: TextStyle(fontWeight: FontWeight.w600),
-                              )
-                            ],
+                          child: ListTile(
+                            title: Text('+1 (514)895-5876', style: TextStyle(fontWeight: FontWeight.w500)),
+                            leading: Icon(Icons.phone, color: Colors.green,),
                           ),
                         )),
-                    SizedBox(width: 16, height: 16),
+                    SizedBox(width: 12, height: 12),
                     Card(
                         elevation: 0,
                         child: SizedBox(
                           width: 300,
                           height: 50,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Icon(
-                                Icons.email,
-                                color: Colors.green,
-                              ),
-                              Text(
-                                'kumi.ku@gmail.com',
-                                style: TextStyle(fontWeight: FontWeight.w600),
-                              )
-                            ],
+                          child: ListTile(
+                            title: Text('kumi.kum@gmail.com', style: TextStyle(fontWeight: FontWeight.w500)),
+                            leading: Icon(Icons.email, color: Colors.green,),
                           ),
                         )),
                   ],
